@@ -2,14 +2,14 @@
 Update json using post in php
 
 ```
-$json = file_get_contents('config.json');
+$json = file_get_contents('test.json');
 $data = json_decode($json, true);
 foreach ($_POST as $key => $value) {
 	if( $data[$key] == $_POST[$key] ) $data[$key] = $_POST[$key];
 	else $data[$key] = $value;
 }
 
-file_put_contents('config.json', json_encode($data));
+file_put_contents('test.json', json_encode($data));
 
 ```
 
